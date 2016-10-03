@@ -10,6 +10,11 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+" sensible defaults
+Plugin 'tpope/vim-sensible'
+" airline status bar
+Plugin 'bling/vim-airline'
+
 Plugin 'Valloric/YouCompleteMe'
 
 "" The following are examples of different formats supported.
@@ -51,7 +56,10 @@ set tabstop=3
 set shiftwidth=3
 set autoindent
 set ignorecase
+set incsearch
 set hlsearch
+set hidden
 syntax on
 set backspace=2
 set fileencodings=utf-8,latin2
+set laststatus=2
