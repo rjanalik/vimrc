@@ -17,10 +17,11 @@ Plugin 'bling/vim-airline'
 
 Plugin 'Valloric/YouCompleteMe'
 
-"" The following are examples of different formats supported.
-"" Keep Plugin commands between vundle#begin/end.
-"" plugin on GitHub repo
-"Plugin 'tpope/vim-fugitive'
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+" git gutter
+Plugin 'airblade/vim-gitgutter'
+
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
