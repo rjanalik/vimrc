@@ -64,3 +64,4 @@ syntax on
 set backspace=2
 set fileencodings=utf-8,latin2
 set laststatus=2
+set updatetime=250
