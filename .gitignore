@@ -3,3 +3,7 @@
 
 # bundle directory with all plugins
 bundle
+dein
+
+# .netrwhist file
+.netrwhist
