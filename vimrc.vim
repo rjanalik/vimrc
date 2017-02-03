@@ -26,7 +26,7 @@ call dein#add('airblade/vim-gitgutter')
 
 " Smart fuzzy completion
 call dein#add('Valloric/YouCompleteMe', {
-      \ 'build': './install.sh --clang-completer',
+      \ 'build': './install.py --clang-completer',
       \ 'timeout': 300,
    \ })
 
