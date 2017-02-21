@@ -24,11 +24,13 @@ call dein#add('tpope/vim-fugitive')
 " git gutter
 call dein#add('airblade/vim-gitgutter')
 
-" Smart fuzzy completion
-call dein#add('Valloric/YouCompleteMe', {
-      \ 'build': './install.py --clang-completer',
-      \ 'timeout': 300,
-   \ })
+if v:version > 703
+   " Smart fuzzy completion
+   call dein#add('Valloric/YouCompleteMe', {
+         \ 'build': './install.py --clang-completer',
+         \ 'timeout': 300,
+      \ })
+endif
 
 " Required:
 call dein#end()
@@ -58,3 +60,27 @@ set fileencodings=utf-8,latin2
 set laststatus=2
 set updatetime=250
 set mouse=a
+
+" Tell vim to remember certain things when we exit
+" '10  :  marks will be remembered for up to 10 previously edited files
+" "100 :  will save up to 100 lines for each register
+" :20  :  up to 20 lines of command-line history will be remembered
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
+" now restore position based on info saved in viminfo
+function! ResCur()
+  if line("'\"") <= line("$")
+    normal! g`"
+    return 1
+  endif
+endfunction
+
+augroup resCur
+  autocmd!
+  autocmd BufWinEnter * call ResCur()
+augroup END
+
+" hilight current line by making the row number on the lhs stand out
+set cursorline
+hi CursorLine ctermbg=NONE cterm=NONE term=NONE
+hi CursorLineNr ctermfg=117 ctermbg=236  term=bold cterm=bold
