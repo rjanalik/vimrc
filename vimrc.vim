@@ -47,8 +47,8 @@ endif
 
 set number
 set expandtab
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 set autoindent
 set ignorecase
 set incsearch
@@ -56,7 +56,8 @@ set hlsearch
 set hidden
 syntax on
 set backspace=2
-set fileencodings=utf-8,latin2
+set fileencodings=utf-8
+set encoding=utf-8
 set laststatus=2
 set updatetime=250
 set mouse=a
